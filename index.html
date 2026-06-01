@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICT Class | Galagedara, Kandy</title>
+    <meta
+      name="description"
+      content="ICT classes in Galagedara, Kandy. Sinhala, Tamil and English medium ICT learning with class posters and student Paint gallery."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="ICT Class home">
+        <img src="assets/logo/anshaf-ict-logo.png" alt="ICT Class logo">
+        <span>ICT Class</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#classes">Classes</a>
+        <a href="#posters">Posters</a>
+        <a href="#gallery">Student Gallery</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" type="button">Light</button>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" id="heroSection">
+        <div class="hero-bg-track" id="heroBgTrack" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Galagedara, Kandy | Madige area, College Road</p>
+          <h1>ICT Class</h1>
+          <p class="hero-lead">
+            ICT classes for students who want clear lessons, practical computer skills, and confident exam preparation.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary phone-button" href="tel:+94757686437">Call 075 768 6437</a>
+            <a class="button secondary" href="https://wa.me/94757686437">WhatsApp Now</a>
+          </div>
+        </div>
+        <div class="hero-panel teacher-profile" aria-label="Teacher profile">
+          <div class="teacher-photo-slider" id="teacherPhotoSlider"></div>
+          <div class="profile-main">
+            <strong>M.A.M. Anshaf</strong>
+          </div>
+          <div class="profile-details">
+            <p>MIT (Master of IT), BEng in Software Engineering, HND in Computing, Diploma in Computer Science</p>
+          </div>
+          <div class="profile-details">
+            <strong>Classes are held in Sinhala, Tamil, and English medium.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="classes" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Class Details</p>
+          <h2>Class News & Updates</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Main Subject</h3>
+            <p>ICT is the main class subject, with practical computer work and guided learning.</p>
+          </article>
+          <article>
+            <h3>Teaching Medium</h3>
+            <p>Sinhala, Tamil and English medium support for students in Galagedara and nearby areas.</p>
+          </article>
+          <article>
+            <h3>Student Work</h3>
+            <p>Grade 6 Paint drawings and other student creations can be displayed in the website gallery.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="posters" class="section poster-section">
+        <div class="section-heading">
+          <p class="eyebrow">Class Posters</p>
+          <h2>Latest Announcements</h2>
+        </div>
+        <div id="posterGrid" class="media-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Student Gallery</p>
+          <h2>Paint Practical Drawings</h2>
+        </div>
+        <div id="gradeFilters" class="grade-filters" aria-label="Filter student gallery by grade"></div>
+        <div id="galleryGrid" class="media-grid student-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="game-project" class="section game-section">
+        <div class="section-heading">
+          <p class="eyebrow">Student Project</p>
+          <h2>Video Game Created By Student</h2>
+        </div>
+        <div id="gameProject" class="game-layout" aria-live="polite"></div>
+      </section>
+
+      <section id="contact" class="contact-band">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Join ICT Class</h2>
+          <p>Galagedara, Kandy - Madige area, College Road</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary phone-button" href="tel:+94757686437">075 768 6437</a>
+          <a class="button secondary" href="https://wa.me/94757686437">WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ICT Class</p>
+      <div class="social-links" id="socialLinks"></div>
+    </footer>
+
+    <script src="site-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

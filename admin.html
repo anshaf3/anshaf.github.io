@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Helper | ICT Class</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .admin-wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 18px;
+      }
+
+      .admin-box {
+        display: grid;
+        gap: 16px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        font-weight: 800;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font: inherit;
+      }
+
+      textarea {
+        min-height: 120px;
+      }
+
+      pre {
+        overflow-x: auto;
+        padding: 16px;
+        border-radius: 8px;
+        background: #171717;
+        color: #fffaf4;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="admin-wrap">
+      <p class="eyebrow">Admin Helper</p>
+      <h1>Add Posters And Student Drawings</h1>
+      <p class="hero-lead">
+        Copy image files into the correct folder, then use this helper to create the line for site-data.js.
+      </p>
+
+      <section class="admin-box">
+        <label>
+          Type
+          <select id="type">
+            <option value="posters">Class poster</option>
+            <option value="gallery">Student drawing</option>
+          </select>
+        </label>
+        <label>
+          Image file name
+          <input id="fileName" placeholder="poster-01.jpg">
+        </label>
+        <label>
+          Title
+          <input id="title" placeholder="ICT Class Admission">
+        </label>
+        <label>
+          Caption
+          <input id="caption" placeholder="Grade 6 practical work">
+        </label>
+        <button class="button primary" id="generate" type="button">Generate Line</button>
+        <pre id="output">{ }</pre>
+      </section>
+    </main>
+
+    <script>
+      const type = document.getElementById("type");
+      const fileName = document.getElementById("fileName");
+      const title = document.getElementById("title");
+      const caption = document.getElementById("caption");
+      const output = document.getElementById("output");
+
+      document.getElementById("generate").addEventListener("click", () => {
+        const folder = type.value === "posters" ? "assets/posters" : "assets/gallery";
+        const item = {
+          title: title.value || "Untitled",
+          image: `${folder}/${fileName.value}`,
+          caption: caption.value || ""
+        };
+        output.textContent = JSON.stringify(item, null, 2) + ",";
+      });
+    </script>
+  </body>
+</html>
